@@ -1,18 +1,24 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
+// Home route
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return Inertia::render('Home');
 });
+
+// Weather routes
+Route::get('/weather/now', [WeatherController::class, 'now'])->name('weather.now');
+Route::get('/weather/forecast', [WeatherController::class, 'forecast'])->name('weather.forecast');
+
+
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+                ->middleware('auth')
+                ->name('logout');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

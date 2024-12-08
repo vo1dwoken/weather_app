@@ -1,0 +1,25 @@
+
+/* Home.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 36px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #2980b9;
+}

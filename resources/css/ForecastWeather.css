@@ -1,0 +1,62 @@
+/* Centering the icon inside the container */
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+    margin: 10px;
+}
+
+/* Style for the date (blue color) */
+.forecast-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.forecast-date:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the hourly forecast details */
+.forecast-item-icon {
+    margin-bottom: 10px;
+}
+
+/* Styling for temperatures and conditions */
+.forecast-item-temp {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Styling for the wind and rain information */
+.forecast-item-wind,
+.forecast-item-rain {
+    font-size: 14px;
+}
+
+/* Overall forecast container */
+.forecast-container {
+    padding: 20px;
+}
+
+.forecast-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Hide forecast details initially, only show on click */
+.forecast-details {
+    display: none;
+}
+
+.forecast-details.open {
+    display: block;
+}
+
+.content {
+    text-align: center;
+}
