@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 
 import { Inertia } from '@inertiajs/inertia';
-import { InertiaLink } from '@inertiajs/inertia-react';
+import { InertiaLink } from '@inertiajs/inertia-react'; // Służy do nawigacji między stronami bez odświeżania przeglądarki
 import Header from '../Components/Header';
 import '../../css/NowWeather.css';
 
 const NowWeather = ({ weather, error }) => {
-    const [city, setCity] = useState('');
+    const [city, setCity] = useState(''); // przechowywanie nazwy miasta wprowadzoną przez użytkownika
 
+    // obsługa formularza
     const handleSubmit = (e) => {
         e.preventDefault();
         if (city) {
-            Inertia.get('/weather/now', { city });
+            Inertia.get('/weather/now', { city }); // Inertia.get: Wysyła żądanie do backendu (metoda now w WeatherController)
         }
     };
 

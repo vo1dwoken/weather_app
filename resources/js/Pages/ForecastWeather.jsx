@@ -15,7 +15,7 @@ const ForecastWeather = ({ forecast, error }) => {
             Inertia.get('/weather/forecast', { city });
         }
     };
-
+// Grupujemy wpisy z prognozy według dni
     const groupByDay = (list) => {
         const days = {};
         list.forEach((entry) => {

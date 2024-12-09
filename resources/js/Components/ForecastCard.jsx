@@ -1,5 +1,6 @@
 import React from 'react';
 
+// komponent służy do wyświetlania informacji o pogodzie
 const ForecastCard = ({ time, icon, temp, description, wind, rain }) => {
     return (
         <div
