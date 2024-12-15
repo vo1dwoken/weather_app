@@ -20,6 +20,7 @@ Route::prefix('weather')->group(function () {
 // Route::get('/weather/forecast', [WeatherController::class, 'forecast'])->name('weather.forecast');
 
 
+// Breeze routes
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
